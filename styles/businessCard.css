@@ -1,0 +1,117 @@
+/** @import url("//fonts.googleapis.com/css?family=Lora:400,700"); **/
+div.vcard {
+	display: block;
+	width: 347px;
+	height: 197px;
+	background: #fff url('/img/cream_dust.png') repeat;
+	font-family: "Lora", Georgia, "Times New Roman", Times, serif;
+	box-shadow: 2px 2px 4px #888888;
+	border-radius: 1px;
+	border: 1px solid #eee;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+div.vcard * {
+	font-size: 16px;
+	line-height: 24px;
+}
+div.vcard span.fn {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+div.vcard span.title {
+	font-weight: 700;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+div.vcard span, div.vcard a.email {
+	display: block;
+}
+div.tel span {
+	display: inline;
+}
+div.tel span.type {
+	padding-right: 5px;
+	font-weight: 700;
+}
+div.tel span.type:after {
+	content: ":";
+}
+a.email:before {
+	content: "Email: ";
+	color: #666;
+	font-weight: 700;
+}
+
+/** Flipping stuff **/
+
+.flip-container {
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	perspective: 1000;
+}
+
+.flip .flipper {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+.flip-container, .vcard {
+	width: 347px;
+	height: 197px;
+}
+.back img {
+	width: 190px;
+	height: 190px;
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {
+	z-index: 2;
+	padding: 27px 23px;
+}
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.Absolute-Center {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.flipIcon {
+	cursor: pointer;
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+	font-size: 26px !important;
+	font-weight: 700;
+}

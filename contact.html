@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="styles/businessCard.css">
+<link rel="stylesheet" href="styles/tsc_social_icons.css">
+<script>
+  //flippable business card
+  function flip() {
+    document.getElementById("flipContainer").className = "flip-container flip";
+  }
+  function flipBack() {
+    document.getElementById("flipContainer").className = "flip-container";
+  }
+</script>
+<div id="header">
+  <h1>Charitha "Churro" Sathkumara</h1>
+
+  <h2>Software Engineer</h2>
+</div>
+
+<div id="content">
+  <h2>Contact Me</h2>
+
+  <form action="https://formspree.io/charitha@sathkumara.com" method="post"
+        class="pure-form pure-form-aligned contact">
+    <fieldset>
+      <input type="hidden" name="_next" value="http://sathkumara.com/#!contact"/>
+      <input type="text" name="_gotcha" style="display:none"/>
+
+      <div class="pure-control-group">
+        <label for="name">Your Name</label>
+        <input id="name" name="from" required="required" type="text" placeholder="Enter your name">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="email">Email Address</label>
+        <input id="email" name="email" required="required" type="email" placeholder="Enter your e-mail Address">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="topic">Subject (optional)</label>
+        <input id="topic" name="subject" type="text" placeholder="Enter a subject">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required="required" maxlength="500"
+                  placeholder="Enter your message"></textarea>
+      </div>
+
+      <div class="pure-controls">
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <h2>Contact Information</h2>
+
+  <div id="flipContainer" class="flip-container">
+    <div class="flipper">
+      <div class="front vcard">
+        <span class="fn">Charitha Sathkumara</span>
+        <span class="title">Software Engineer</span>
+
+        <a class="email" href="mailto:charitha@sathkumara.com">charitha@sathkumara.com</a>
+
+        <div class="tel"><span class="type">Mobile</span><a href="tel:15304248776">+1.530.424.8776</a></div>
+        <p class="flipIcon" onclick="flip()">&raquo;</p>
+      </div>
+
+      <div class="back vcard">
+        <img class="Absolute-Center" src="/img/charitha_contact_vcard.png"/>
+
+        <p class="flipIcon" onclick="flipBack()">&laquo;</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Professional Profiles</h2>
+
+  <div>
+    <a class="stackoverflow_square32 tsc_social_square32" href="http://stackoverflow.com/users/1038832/churro">StackOverflow</a>
+    <br/>
+    <a class="linkedin_square32 tsc_social_square32" href="http://www.linkedin.com/pub/charitha-sathkumara/5a/ba1/837">Linkedin</a>
+    <br/>
+    <a class="github_square32 tsc_social_square32" href="https://github.com/srilankanchurro">GitHub</a>
+  </div>
+</div>
