@@ -86,10 +86,14 @@
       $("li#" + hash).addClass("pure-menu-selected");
     }).fail(function onFailure(jqXHR) {
       //console.log(jqXHR);
-      var errCode;
+      var errMsg = "<div id='content'><h1>Failed to load page.</h1></div>",
+        errCode;
       if ((errCode = jqXHR && jqXHR.status)) {
-        $("#main").html("<div id='content'><h1>Failed to load page.</h1><h2>HTTP " + errCode + "</h2></div>");
+        errMsg += "<h2>HTTP " + errCode + "</h2>";
+        errMsg += jqXHR.toString();
       }
+      errMsg += "</div>";
+      $("#main").html(errMsg);
     });
   }
   window.addEventListener('hashchange', router);
